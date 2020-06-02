@@ -1,4 +1,4 @@
-This is a docker image for the Discord bot Auto Voice Channels.
+#This is a docker image for the Discord bot Auto Voice Channels.
 
 https://github.com/gregzaal/Auto-Voice-Channels
 
@@ -8,7 +8,7 @@ Please make sure you first read the docummentation of Auto-Voice-Channels.
 
 You will need to create a directory where your guild data will be persistant.
 
-docker run -d -e ADMIN_ID=<ADMIN ID> -e CLIENT_ID=<CLIENT_ID> -e TZ=<TIMEZONE eg Europe/London> -e TOKEN=<TOKEN> morgyn/autodiscordchannels
+`docker run -d -e ADMIN_ID=<ADMIN ID> -e CLIENT_ID=<CLIENT_ID> -e TZ=<TIMEZONE eg Europe/London> -e TOKEN=<TOKEN> morgyn/autodiscordchannels`
 
 
     ADMIN_ID is your ID, for the bot to DM you when it logs on, joins servers, gets errors, etc.
