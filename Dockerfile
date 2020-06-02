@@ -10,10 +10,7 @@ RUN apt-get update &&\
 
 WORKDIR /AutoVoiceChannels
 
-RUN pip install discord.py && \
-    pip install pytz && \
-    pip install psutil && \
-    pip install requests && \
+RUN pip install -r /AutoVoiceChannels/requirements.txt &&\
     pip3 install virtualenv
 
 RUN python3 -m virtualenv bot-env && . bot-env/bin/activate
