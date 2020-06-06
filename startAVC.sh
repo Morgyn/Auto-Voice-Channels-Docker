@@ -5,13 +5,24 @@ if [ -z "$ADMIN_ID" -o -z "$CLIENT_ID" -o -z "$TZ" -o -z "$TOKEN" ]; then
    exit -1
 fi
 
+if [ -z "${ADMIN_ID##*[!0-9]*}" ]; then
+   echo "ADMIN_ID must be a number"
+   exit -1
+fi
+
+if [ -z "${CLIENT_ID##*[!0-9]*}" ]; then
+   echo "CLIENT_ID must be a number"
+   exit -1
+fi
+
+
 cd /AutoVoiceChannels
 
 cat >config.json <<CONFIG_JSON
 {
-    "admin_id": "$ADMIN_ID",
-    "client_id": "$CLIENT_ID",
-    "log_timezone": "$TZ",
+    "admin_id":$ADMIN_ID,
+    "client_id":$CLIENT_ID,
+    "log_timezone":"$TZ",
     "token":"$TOKEN"
 }
 CONFIG_JSON
