@@ -1,4 +1,4 @@
-FROM python:3.8.3-slim
+FROM python:3.7.3-slim
 
 RUN apt-get update &&\
     apt-get -y install curl unzip &&\
@@ -13,10 +13,7 @@ WORKDIR /AutoVoiceChannels
 
 RUN apt-get -y install build-essential &&\
     pip install -r /AutoVoiceChannels/requirements.txt &&\
-    pip3 install virtualenv &&\
     apt-get -y remove build-essential
-
-RUN python3 -m virtualenv bot-env && . bot-env/bin/activate
 
 COPY startAVC.sh startAVC.sh
 
