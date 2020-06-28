@@ -1,4 +1,4 @@
-FROM python:3.7.3-slim
+FROM python:slim
 
 RUN apt-get update &&\
     apt-get -y install curl unzip &&\
