@@ -19,7 +19,7 @@ docker run -d \
   -e CLIENT_ID=<CLIENT_ID> \
   -e TZ=<TIMEZONE> \
   -e TOKEN=<TOKEN> \
-  -v <GUILD DATA DIR>:/AutoVoiceChannels/guilds \
+  -v <GUILD DATA DIR>:/AutoVoiceChannels/guilds:Z \
   morgyn/autovoicechannels
 ```
 ### docker-compose
@@ -35,7 +35,7 @@ services:
       - TZ=<TIMEZONE>
       - TOKEN=<TOKEN>
     volumes:
-      - <GUILD DATA DIR>:/AutoVoiceChannels/guilds
+      - <GUILD DATA DIR>:/AutoVoiceChannels/guilds:Z
     restart: unless-stopped
 ```
 
