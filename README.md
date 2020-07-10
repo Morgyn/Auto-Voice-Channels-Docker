@@ -13,7 +13,7 @@ You will need to create a directory where your guild data will be persistant.
 ### Docker
 ```bash
 docker run -d \
-  --name 7dtdserver \
+  --name avc \
   --restart unless-stopped \
   -e ADMIN_ID=<ADMIN ID> \
   -e CLIENT_ID=<CLIENT_ID> \
