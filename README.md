@@ -26,7 +26,7 @@ docker run -d \
 ```
 version: '2'
 services:
-  7dtdserver:
+  avc:
     image: morgyn/autovoicechannels
     container_name: AutoVoiceChannels
     environment:
