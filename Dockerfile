@@ -1,5 +1,8 @@
 FROM python:slim
 
+ENV DISABLE_LOOP=false
+ENV heartbeat_timeout=60
+
 RUN apt-get update &&\
     apt-get -y install curl unzip &&\
     curl https://codeload.github.com/gregzaal/Auto-Voice-Channels/zip/master -o avc.zip &&\
