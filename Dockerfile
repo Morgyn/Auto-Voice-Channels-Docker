@@ -14,6 +14,13 @@ WORKDIR /AutoVoiceChannels
 RUN apt-get -y install build-essential &&\
     pip install -r /AutoVoiceChannels/requirements.txt &&\
     apt-get -y remove build-essential
+    
+# Clear unused files
+RUN apt clean && \
+    rm -rf \
+	/tmp/* \
+	/var/lib/apt/lists/* \
+	/var/tmp/*
 
 COPY startAVC.sh startAVC.sh
 
