@@ -2,6 +2,7 @@ FROM python:slim
 
 ENV DISABLE_LOOP=false
 ENV heartbeat_timeout=60
+ENV RDY_MESSAGE=false
 
 RUN apt-get update &&\
     apt-get -y install curl unzip &&\
